@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+  <script>
+    // Correct approach: replacing the content of the div instead of the whole element.
+    const newElement = document.createElement('p');
+    newElement.textContent = "This text replaces the div content.";
+    document.getElementById("myDiv").innerHTML = ''; // Clear existing content
+    document.getElementById("myDiv").appendChild(newElement);
+    
+    //Alternative: 
+    // const newDiv = document.createElement('div');
+    // newDiv.innerHTML = '<p>This text replaces the div content</p>';
+    // document.getElementById('myDiv').replaceWith(newDiv);
+  </script>
+</body>
+</html>
