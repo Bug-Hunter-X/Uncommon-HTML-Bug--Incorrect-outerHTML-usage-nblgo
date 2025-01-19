@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+  <script>
+    // Incorrectly using innerHTML to replace the entire div element
+    document.getElementById("myDiv").outerHTML = "<p>This text replaces the div.</p>";
+  </script>
+</body>
+</html>
